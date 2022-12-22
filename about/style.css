@@ -1,0 +1,111 @@
+body {
+  background-color: #082032;
+  color: aliceblue;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 599px) {
+  .medsos svg {
+    width: 15px;
+    height: 15px;
+  }
+  .container .float-start {
+    width: 200px;
+  }
+  .container .overlay:target img {
+    width: 90%;
+  }
+}
+/* time */
+.time {
+  width: 50%;
+  border-radius: 1rem;
+  float: right;
+  font-size: 12px;
+  padding: 12px;
+  background-color: rgba(44, 57, 75, 0.5);
+}
+
+/* navbar */
+.containers {
+  background-color: rgba(44, 57, 75, 0.5);
+  border-radius: 1rem;
+  width: 95%;
+  margin: auto;
+  backdrop-filter: blur(10px);
+}
+.containers .bj {
+  width: 60px;
+  margin: auto;
+  background-color: black;
+  border-radius: 0.8rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.containers .col-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+/* main */
+.container {
+  background-color: rgba(44, 57, 75, 0.5);
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 150px;
+  width: 95%;
+  overflow: hidden;
+}
+.container .row img {
+  border-radius: 2rem;
+  transition: 0.5s;
+}
+.container .row img:hover {
+  transform: scale(1.05, 1.05);
+}
+/* overlay */
+.overlay {
+  background-color: rgba(44, 57, 75, 0.8);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+
+.overlay:target {
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+.overlay .close {
+  display: none;
+}
+.overlay img {
+  display: none;
+}
+
+.overlay:target .close {
+  justify-content: end;
+  overflow: auto;
+  display: flex;
+}
+.overlay:target img {
+  width: 500px;
+  display: flex;
+  margin: 0 auto;
+  z-index: 999;
+}
+/* medsos */
+.medsos {
+  display: flex;
+  margin: 10px;
+  width: 300px;
+}
+.medsos a {
+  margin-right: 15px;
+}

@@ -1,0 +1,120 @@
+:root {
+  --color-dark: black;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+body {
+  background-color: #082032;
+  overflow-x: hidden;
+  color: aliceblue;
+  height: 100rem;
+}
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .identify img {
+    margin: 5px;
+  }
+  .identify img {
+    width: 8rem;
+  }
+  .brand-sm .time {
+    width: 10rem;
+  }
+}
+/* brand */
+.brand-sm {
+  color: aliceblue;
+}
+.brand-sm .time {
+  width: 50%;
+  border-radius: 1rem;
+  float: right;
+  font-size: 12px;
+  padding: 12px;
+  background-color: rgba(44, 57, 75, 0.5);
+}
+/* nav */
+.containers {
+  background-color: rgba(44, 57, 75, 0.5);
+  border-radius: 1rem;
+  width: 95%;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  overflow-x: hidden;
+}
+.containers .bj {
+  width: 60px;
+  margin: auto;
+  background-color: black;
+  border-radius: 0.8rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.containers .col-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+/* identify */
+.identify {
+  background-color: rgba(44, 57, 75, 0.5);
+  border-radius: 1rem;
+  width: 95%;
+  margin: auto;
+  padding-top: 5px;
+  transition: 0.5s;
+  transition-delay: 100ms;
+}
+.identify:hover {
+  transform: scale(1.01, 1.01);
+}
+.identify img {
+  border-radius: 2rem;
+  width: 200px;
+  padding: 15px;
+}
+/* icon */
+.containerx {
+  width: 95%;
+  border-radius: 1rem;
+  margin: auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+.containerx a {
+  text-decoration: none;
+}
+.containerx p {
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+}
+.containerx .bj {
+  width: 60px;
+  margin: auto;
+  background-color: black;
+  border-radius: 0.8rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+/* contact */
+.contact {
+  width: 95%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  background-color: rgba(44, 57, 75, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.contact p {
+  color: aliceblue;
+}
