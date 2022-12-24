@@ -104,8 +104,9 @@ a {
 .medsos {
   display: flex;
   margin: 10px;
-  width: 300px;
+  width: 500%;
+  justify-content: center;
 }
 .medsos a {
-  margin-right: 15px;
+  margin-right: 20px;
 }

@@ -1,11 +1,3 @@
-<?php
-date_default_timezone_set("Asia/jakarta");
-    $date = date("l, d-M-Y");
-    $time = date("H:i");
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,15 +21,28 @@ date_default_timezone_set("Asia/jakarta");
         <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z" />
       </svg>
       <span class="fw-bold fs-3 p-2">skill</span>
-      <p class="time text-center shadow"><?= $date; ?><br><?= $time; ?></p>
-   
+      <p class="time text-center"><span id="tanggalwaktu"></span></p>
+      <script>
+        var tw = new Date();
+        if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+        else a = tw.getTime();
+        tw.setTime(a);
+        var tahun = tw.getFullYear();
+        var hari = tw.getDay();
+        var bulan = tw.getMonth();
+        var tanggal = tw.getDate();
+        var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+        var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+        document.getElementById("tanggalwaktu").innerHTML =
+          hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+      </script>
     </div>
     <!-- time end -->
     <!-- navbar start -->
     <div class="containers fixed-bottom my-3 shadow">
       <div class="row text-center">
         <div class="col-3">
-          <a href="../home/index.php">
+          <a href="../index.html">
             <div class="bj">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                 <path
@@ -48,7 +53,7 @@ date_default_timezone_set("Asia/jakarta");
           </a>
         </div>
         <div class="col-3">
-          <a href="../about/about.php">
+          <a href="../about/about.html">
             <div class="bj">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -70,7 +75,7 @@ date_default_timezone_set("Asia/jakarta");
           </a>
         </div>
         <div class="col-3">
-          <a href="../contact/contact.php">
+          <a href="../contact/contact.html">
             <div class="bj">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
                 <path
@@ -106,20 +111,18 @@ date_default_timezone_set("Asia/jakarta");
           </div>
         </div>
         <div class="col-sm-6">
-          <p>
-          my vision is makes my code simple and makes innovation web like different any others but i am a web developer it depends on my clients 
-          </p>
+          <p>my vision is makes my code simple and makes innovation web like different any others but i am a web developer it depends on my clients</p>
         </div>
       </div>
       <p class="fs-2 text-center mt-5">Current Project</p>
       <div class="row justify-content-around m-5 text-center">
         <div class="col-lg-4 my-3">
-          <a href="#">
-           <div class="back">
-           <img src="img/aryo.jpg" alt="" width="200px" />
-            <p class="my-3">none</p></a
-          >
-           </div>
+          <div class="back">
+            <a href="#">
+              <img src="img/aryo.jpg" alt="" width="200px" />
+              <p class="my-3">none</p></a
+            >
+          </div>
         </div>
         <div class="col-lg-4 my-3">
           <a href="#">
